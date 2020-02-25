@@ -127,6 +127,9 @@ public class splashScreen extends AppCompatActivity {
                 TimeUnit.SECONDS,   // Unit of timeout
                 this,               // Activity (for callback binding)
                 mCallbacks);        // OnVerificationStateChangedCallbacks
+
+
+
     }
 
 
@@ -135,6 +138,7 @@ public class splashScreen extends AppCompatActivity {
 
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+
 
 
 
@@ -150,6 +154,10 @@ public class splashScreen extends AppCompatActivity {
             super.onCodeSent(s, forceResendingToken);
 
             codeSent = s;
+
+            Toast.makeText(getApplicationContext(),
+                    "Code Sent", Toast.LENGTH_LONG).show();
+
         }
     };
 
