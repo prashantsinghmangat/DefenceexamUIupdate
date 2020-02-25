@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".User_Verification.splashScreen">
+
+
+    <ImageView
+        android:layout_weight="60"
+        android:id="@+id/newscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:background="@drawable/newscreen"
+        android:scaleType="centerCrop">
+
+    </ImageView>
+
+
+
+     <EditText
+         android:layout_weight="10"
+         android:layout_margin="10dp"
+         android:id="@+id/editTextPhone"
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:digits="0123456789"
+         android:ems="10"
+         android:background="@drawable/tab_background_selected"
+         android:hint="  Enter phone Number.."
+         android:inputType="phone" />
+
+     <Button
+         android:layout_weight="10"
+         android:background="@drawable/tab_layout_background"
+         android:layout_margin="10dp"
+         android:id="@+id/buttonGetVerificationCode"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Get Verification Code"
+        android:textAllCaps="false" />
+
+    <EditText
+        android:layout_weight="10"
+        android:layout_margin="10dp"
+        android:id="@+id/editTextCode"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:digits="0123456789"
+        android:hint=" Enter code received"
+        android:background="@drawable/tab_background_selected"
+
+        android:inputType="number" />
+
+    <Button
+        android:layout_weight="10"
+        android:layout_margin="10dp"
+        android:background="@drawable/tab_layout_background"
+        android:id="@+id/buttonSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text=" Sign In " />
+
+</LinearLayout>

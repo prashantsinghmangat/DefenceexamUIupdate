@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="   Analysis" />
+        <item
+            android:id="@+id/nce"
+            android:title="   Current Events" />
+        <item
+            android:id="@+id/gs_c"
+            android:title="   Chemistry" />
+        <item
+            android:id="@+id/gs_p"
+            android:title="   Physics" />
+        <item
+            android:id="@+id/gs_b"
+            android:title="   Biology" />
+
+        <item
+            android:id="@+id/gs_ip"
+            android:title="   Indian Polity" />
+        <item
+            android:id="@+id/gs_ie"
+            android:title="   Indian Economy" />
+        <item
+            android:id="@+id/gs_ig"
+            android:title="   Geography" />
+        <item
+            android:id="@+id/gs_ih"
+            android:title="   Indian History" />
+
+    </group>
+
+
+
+</menu>

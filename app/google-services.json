@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "539692169581",
+    "firebase_url": "https://defencepreparation2.firebaseio.com",
+    "project_id": "defencepreparation2",
+    "storage_bucket": "defencepreparation2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539692169581:android:6b8ea4ad5b884ba8",
+        "android_client_info": {
+          "package_name": "exam.defencepreparation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539692169581-ffkqajrtpaqgnhc166rqama2394oq1nv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "exam.defencepreparation",
+            "certificate_hash": "7cf90a28f12e3550fb27164b877945ae94cd6b65"
+          }
+        },
+        {
+          "client_id": "539692169581-e2ikb071ih2ui4rb8140cd43v9ujhf2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXY7oOVEI5RYdZVGCjXKT6EpQo-pQj7FE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539692169581-e2ikb071ih2ui4rb8140cd43v9ujhf2f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

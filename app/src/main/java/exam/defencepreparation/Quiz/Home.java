@@ -1,0 +1,58 @@
+package exam.defencepreparation.Quiz;
+
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+
+import exam.defencepreparation.R;
+import exam.defencepreparation.Static_GK.DashBoard;
+import exam.defencepreparation.Static_GK.DashBoard_Video;
+import exam.defencepreparation.Static_GK.Function;
+
+
+public class Home extends AppCompatActivity {
+    Dialog myDialog;
+    BottomNavigationView bottomNavigationView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+        myDialog = new Dialog(this);
+
+        setDefaultFragment();
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent = new Intent(Home.this, DashBoard_Video.class);
+        startActivity(intent);
+
+        finish();
+    }
+
+    private void setDefaultFragment() {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+      //
+
+        if (Function.isNetworkAvailable(this)) {
+
+            transaction.replace(R.id.frame_layout, CategoryFragment.newInstance());
+            transaction.commit();
+
+        }
+        //
+         else {
+            myDialog.setContentView(R.layout.custompopup);
+
+            myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            myDialog.show();
+        }
+
+    }
+}

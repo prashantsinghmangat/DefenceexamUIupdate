@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Defence Exam</string>
+    <string name="admob_app_id">ca-app-pub-9549353955535576~84547529</string>
+    <string name="banner_home_footer">ca-app-pub-9549353955535576150620656</string>
+    <string name="interstitial_full_screen">ca-app-pub-95493539535576/909305254</string>
+    <string name="share_title">Defence preparation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_capf_ac_2020_home">Capf_ac_2020_home</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="todo">TODO</string>
+
+
+</resources>
