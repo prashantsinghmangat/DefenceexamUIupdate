@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Defence Exam</string>
-    <string name="admob_app_id">ca-app-pub-9549353955535576~84547529</string>
-    <string name="banner_home_footer">ca-app-pub-9549353955535576150620656</string>
-    <string name="interstitial_full_screen">ca-app-pub-95493539535576/909305254</string>
+    <string name="admob_app_id">ca-7587424216~17294856</string>
+    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
     <string name="share_title">Defence preparation</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -10,6 +10,18 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string name="google_client_id">539692169581-hoj79fsq7p1u73q4mf7sjdgdu74s5mfk.apps.googleusercontent.com</string>
+
+
+    <array name="menuOptions">
+        <item>Dashboard</item>
+        <item>Personal</item>
+        <item>High scores</item>
+        <item>Settings</item>
+        <item>About</item>
+    </array>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -22,6 +34,8 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="todo">TODO</string>
+    <string name="please_enter_your_country_code_n_and_phone_number_for_verification">Please enter your Country Code \n and Phone number for verification</string>
+    <string name="your_phone_number">Your Phone Number</string>
 
 
 </resources>

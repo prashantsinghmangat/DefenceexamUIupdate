@@ -2,7 +2,6 @@ package exam.defencepreparation.SSB;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,10 +15,11 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.squareup.picasso.Picasso;
 
+import androidx.appcompat.app.AppCompatActivity;
 import exam.defencepreparation.Quiz.Common.Common;
 import exam.defencepreparation.R;
 
-public class Playing extends AppCompatActivity  implements View.OnClickListener{
+public class Playing extends AppCompatActivity implements View.OnClickListener{
 
     final static long INTERVAL = 3000;
     final static long TIMEOUT = 15000;

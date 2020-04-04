@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
@@ -34,6 +32,9 @@ import com.squareup.picasso.Picasso;
 
 import java.io.File;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import exam.defencepreparation.Screenshot.ScreenshotType;
 import exam.defencepreparation.Screenshot.ScreenshotUtils;
 import exam.defencepreparation.news.NewsDetail;
@@ -101,7 +102,7 @@ public class Recycler_View_Click extends AppCompatActivity implements View.OnCli
         mDatabase.keepSynced(true);
         mRecyclerView=(RecyclerView)findViewById(R.id.rec_click);
         mRecyclerView.hasFixedSize();
-        LinearLayoutManager mLayoutManger = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true);
+        LinearLayoutManager mLayoutManger = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,true);
         mLayoutManger.setReverseLayout(true);
         mLayoutManger.setStackFromEnd(true);
         mRecyclerView.setLayoutManager(mLayoutManger);

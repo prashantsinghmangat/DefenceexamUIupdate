@@ -14,11 +14,12 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/llScroll"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_margin="1dp"
                 android:elevation="4dp"
@@ -51,7 +52,7 @@
 
                         <TextView
                             android:textStyle="bold"
-                            android:layout_weight="9"
+                            android:layout_weight="8"
                             android:text="Hello Indian Defence..."
                             android:id="@+id/topic"
                             style="@style/TextAppearance.AppCompat.Headline"
@@ -70,6 +71,15 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:src="@drawable/whatsappimage" />
+                        <ImageView
+                            android:layout_weight="1"
+                            android:id="@+id/btn"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/pdflogo" />
+
+
 
 
                     </LinearLayout>
@@ -99,7 +109,7 @@
 
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
 
@@ -110,13 +120,13 @@
                 android:layout_height="1dp"
                 > </View>
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rec_click"
                 android:background="#485563"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            </android.support.v7.widget.RecyclerView>
+            </androidx.recyclerview.widget.RecyclerView>
 
 
         </LinearLayout>

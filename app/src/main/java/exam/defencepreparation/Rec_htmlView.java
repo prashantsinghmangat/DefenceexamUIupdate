@@ -3,12 +3,17 @@ package exam.defencepreparation;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.pdf.PdfDocument;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Environment;
+
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
@@ -30,7 +35,12 @@ import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import exam.defencepreparation.Screenshot.ScreenshotType;
 import exam.defencepreparation.Screenshot.ScreenshotUtils;
 import exam.defencepreparation.news.NewsDetail;
@@ -49,6 +59,7 @@ public class Rec_htmlView  extends AppCompatActivity implements View.OnClickList
     private LinearLayout rootContent;
     TextView app_name;
     ImageView imageView;
+    ImageView btn;
 
 
 
@@ -70,10 +81,17 @@ public class Rec_htmlView  extends AppCompatActivity implements View.OnClickList
         image= extras.getString("image");
         databaseID=extras.getString("datalink");
         imageView=(ImageView)findViewById(R.id.share);
+        btn=findViewById(R.id.btn);
+
 
         post_image=(KenBurnsView) findViewById(R.id.pic);
 
-
+          btn.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View view) {
+                  createPdf();
+              }
+          });
 
         AccelerateDecelerateInterpolator ACCELERATE_DECELERATE = new AccelerateDecelerateInterpolator();
         RandomTransitionGenerator generator = new RandomTransitionGenerator(4000, ACCELERATE_DECELERATE);
@@ -95,7 +113,7 @@ public class Rec_htmlView  extends AppCompatActivity implements View.OnClickList
         mDatabase.keepSynced(true);
         mRecyclerView=(RecyclerView)findViewById(R.id.rec_click);
         mRecyclerView.hasFixedSize();
-        LinearLayoutManager mLayoutManger = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true);
+        LinearLayoutManager mLayoutManger = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,true);
         mLayoutManger.setReverseLayout(true);
         mLayoutManger.setStackFromEnd(true);
         mRecyclerView.setLayoutManager(mLayoutManger);
@@ -375,5 +393,51 @@ public class Rec_htmlView  extends AppCompatActivity implements View.OnClickList
     public void onBackPressed() {
         finish();
     }
+
+
+    private void createPdf(){
+        // create a new document
+        PdfDocument document = new PdfDocument();
+        // crate a page description
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(300, 600, 1).create();
+        // start a page
+        PdfDocument.Page page = document.startPage(pageInfo);
+        Canvas canvas = page.getCanvas();
+        Paint paint = new Paint();
+        paint.setColor(Color.RED);
+        canvas.drawCircle(50, 50, 30, paint);
+        paint.setColor(Color.BLACK);
+        //canvas.drawText(sometext, 80, 50, paint);
+        //canvas.drawt
+        // finish the page
+        document.finishPage(page);
+// draw text on the graphics object of the page
+        // Create Page 2
+        pageInfo = new PdfDocument.PageInfo.Builder(300, 600, 2).create();
+        page = document.startPage(pageInfo);
+        canvas = page.getCanvas();
+        paint = new Paint();
+        paint.setColor(Color.BLUE);
+        canvas.drawCircle(100, 100, 100, paint);
+        document.finishPage(page);
+        // write the document content
+        String directory_path = Environment.getExternalStorageDirectory().getPath() + "/mypdf/";
+        File file = new File(directory_path);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+        String targetPdf = directory_path+"test-2.pdf";
+        File filePath = new File(targetPdf);
+        try {
+            document.writeTo(new FileOutputStream(filePath));
+            Toast.makeText(this, "Done", Toast.LENGTH_LONG).show();
+        } catch (IOException e) {
+            Log.e("main", "error "+e.toString());
+            Toast.makeText(this, "Something wrong: " + e.toString(),  Toast.LENGTH_LONG).show();
+        }
+        // close the document
+        document.close();
+    }
+
 }
 

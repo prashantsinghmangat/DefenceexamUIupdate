@@ -6,10 +6,10 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="   Analysis" />
+            android:title="  Current Events" />
         <item
             android:id="@+id/nce"
-            android:title="   Current Events" />
+            android:title="   Analysis" />
         <item
             android:id="@+id/gs_c"
             android:title="   Chemistry" />

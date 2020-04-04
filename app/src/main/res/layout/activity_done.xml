@@ -9,7 +9,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context=".Quiz.Done">
 
-  <android.support.v7.widget.CardView
+  <androidx.cardview.widget.CardView
       android:layout_weight="9"
       android:elevation="20dp"
       app:cardCornerRadius="12dp"
@@ -152,7 +152,7 @@
 
     </LinearLayout>
 
-  </android.support.v7.widget.CardView>
+  </androidx.cardview.widget.CardView>
     <com.google.android.gms.ads.AdView
         android:background="#485563"
         android:layout_weight="1"

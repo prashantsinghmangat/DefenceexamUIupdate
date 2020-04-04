@@ -3,9 +3,7 @@ package exam.defencepreparation.Previous_year_paper;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +16,10 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import exam.defencepreparation.R;
 import exam.defencepreparation.news.NewsDetail;
 

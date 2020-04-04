@@ -3,8 +3,7 @@ package exam.defencepreparation.Static_GK;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -12,6 +11,8 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import exam.defencepreparation.Previous_year_paper.English_Section;
 import exam.defencepreparation.Quiz.Home;
 import exam.defencepreparation.R;

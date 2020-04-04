@@ -3,8 +3,7 @@ package exam.defencepreparation.Static_GK;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -13,6 +12,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import exam.defencepreparation.CAPF_AC_2020.Capf_ac_2020_home;
 import exam.defencepreparation.R;
 import exam.defencepreparation.SSB.SSB_Final;

@@ -2,10 +2,9 @@ package exam.defencepreparation.Youtube;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,6 +21,8 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import exam.defencepreparation.R;
 import exam.defencepreparation.SSB.OIR;
 import exam.defencepreparation.common.Config;
@@ -62,7 +63,7 @@ public class Youtube_MainActivity extends YouTubeBaseActivity {
         mDatabase.keepSynced(true);
         mRecyclerView=(RecyclerView)findViewById(R.id.rec_youtube);
         mRecyclerView.hasFixedSize();
-        LinearLayoutManager mLayoutManger = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true);
+        LinearLayoutManager mLayoutManger = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,true);
         mLayoutManger.setReverseLayout(true);
         mLayoutManger.setStackFromEnd(true);
         mRecyclerView.setLayoutManager(mLayoutManger);

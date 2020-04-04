@@ -2,7 +2,6 @@ package exam.defencepreparation.Quiz;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Collections;
 
+import androidx.appcompat.app.AppCompatActivity;
 import exam.defencepreparation.Quiz.Common.Common;
 import exam.defencepreparation.Quiz.Model.Question;
 import exam.defencepreparation.R;

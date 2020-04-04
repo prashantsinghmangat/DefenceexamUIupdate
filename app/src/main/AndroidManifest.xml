@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".AdsMob.MyApplication"
@@ -13,19 +15,16 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".User_Verification.splashScreen">
-
-
+        <activity android:name=".Login_SetUp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".CAPF_AC_2020.Capf_ac_2020_home"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -34,7 +33,7 @@
         <activity
             android:name=".Static_GK.DashBoard"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity android:name=".Youtube_general_study.YouTube_general">
             <intent-filter>
                 <action android:name="general" />
@@ -45,32 +44,31 @@
         <activity
             android:name=".Quiz.Home"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Quiz.Start"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Quiz.Playing"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Quiz.Done"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".SSB.Playing_SRT"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".SSB.Start1"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
-
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".SSB.Done"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
 
         <service android:name=".Services.MyFirebaseIdService">
             <intent-filter>
@@ -91,7 +89,7 @@
         <activity
             android:name=".SSB.SSB_Final"
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="ssb" />
 
@@ -101,7 +99,7 @@
         <activity
             android:name=".defence_blog.Defence_Blog"
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="defence" />
 
@@ -124,7 +122,7 @@
         <activity
             android:name=".news.News_Daily"
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="news" />
 
@@ -134,7 +132,7 @@
         <activity
             android:name=".Static_GK.DashBoard_Video"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity android:name=".Youtube.Youtube_MainActivity" />
         <activity android:name=".New_JOB" />
         <activity android:name=".Previous_year_paper.English_Section" />

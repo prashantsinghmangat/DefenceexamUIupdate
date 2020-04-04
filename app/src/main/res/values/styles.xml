@@ -19,6 +19,7 @@
     <style name="NoActionBar" parent="Theme.Design.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar" />

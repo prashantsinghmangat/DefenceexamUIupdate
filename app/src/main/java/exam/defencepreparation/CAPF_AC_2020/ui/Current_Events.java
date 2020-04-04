@@ -5,13 +5,13 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -25,10 +25,14 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import dmax.dialog.SpotsDialog;
 import exam.defencepreparation.R;
 import exam.defencepreparation.Rec_htmlView;
 import exam.defencepreparation.Recycler_View_Click;
+import exam.defencepreparation.news.Army;
 import exam.defencepreparation.news.NewsDetail;
 
 import static exam.defencepreparation.R.layout.interface_news;
@@ -39,17 +43,23 @@ public class Current_Events extends Fragment {
     AdView mAdView;
     private RecyclerView mRecyclerView;
     private DatabaseReference mDatabase;
+    TextView read;
     AlertDialog dialog;
+
     public Current_Events() {
 
     }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_airforce, container, false);
+
         dialog = new SpotsDialog(getActivity());
         dialog.show();
+
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Ge_CE");
         mDatabase.keepSynced(true);
         mRecyclerView=(RecyclerView)view.findViewById(R.id.rec_airforce);
@@ -57,7 +67,7 @@ public class Current_Events extends Fragment {
         //  LinearLayout layout=(LinearLayout)view.findViewById(R.id.linearLayout);
         //read=(TextView)view.findViewById(R.id.completeText);
         mRecyclerView.hasFixedSize();
-        LinearLayoutManager mLayoutManger = new LinearLayoutManager(this.getActivity());
+        LinearLayoutManager  mLayoutManger = new LinearLayoutManager(this.getActivity());
         mLayoutManger.setReverseLayout(true);
         mLayoutManger.setStackFromEnd(true);
         mRecyclerView.setLayoutManager(mLayoutManger);
@@ -66,10 +76,14 @@ public class Current_Events extends Fragment {
 
 
         mAdView = (AdView) view.findViewById(R.id.adView);
+
+
+
         AdRequest adRequest1 = new AdRequest.Builder()
                 // .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 // Check the LogCat to get your test device ID
                 .build();
+
         mAdView.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {
@@ -141,11 +155,11 @@ public class Current_Events extends Fragment {
         //progressBar.setVisibility(VISIBLE);
 
 
-        FirebaseRecyclerAdapter<NewsDetail, Current_Events.MyViewHolder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<NewsDetail, Current_Events.MyViewHolder>
-                (NewsDetail.class , youtube_rec_design, Current_Events.MyViewHolder.class,mDatabase) {
+        FirebaseRecyclerAdapter<NewsDetail, Army.MyViewHolder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<NewsDetail, Army.MyViewHolder>
+                (NewsDetail.class , youtube_rec_design, Army.MyViewHolder.class,mDatabase) {
 
             @Override
-            protected void populateViewHolder(final Current_Events.MyViewHolder viewHolder, final NewsDetail model, int position) {
+            protected void populateViewHolder(final Army.MyViewHolder viewHolder, final NewsDetail model, int position) {
 
                 // screen shot code  here
 
@@ -200,7 +214,7 @@ public class Current_Events extends Fragment {
 
 
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder
+    public class MyViewHolder extends RecyclerView.ViewHolder
     {
         Button share;
         TextView post_desc;
@@ -218,22 +232,23 @@ public class Current_Events extends Fragment {
 
         public void setTopic(String topic)
         {
-            TextView Topic=(TextView)mView.findViewById(R.id.news_title);
+            TextView Topic=(TextView)mView.findViewById(R.id.tittle);
             Topic.setText(topic);
         }
 
         public void setDetail(String detail){
-            post_desc = (TextView)mView.findViewById(R.id.news_desc);
-            post_desc.setText(detail);
+            post_desc = (TextView)mView.findViewById(R.id.topic1);
+            post_desc.setText(Html.fromHtml(detail));
+
         }
 
         public void setDate(String date){
-            TextView  Date = (TextView)mView.findViewById(R.id.date);
+            TextView  Date = (TextView)mView.findViewById(R.id.time);
             Date.setText(date);
         }
 
         public void setImage(final Context ctx, final String image){
-            final KenBurnsView post_image=(KenBurnsView) mView.findViewById(R.id.new_pic);
+            final ImageView post_image=(ImageView) mView.findViewById(R.id.card_image);
             Picasso.with(ctx).load(image).networkPolicy(NetworkPolicy.OFFLINE).placeholder(R.drawable.loadingpic).into(post_image, new Callback() {
                 @Override
                 public void onSuccess() {
@@ -253,4 +268,9 @@ public class Current_Events extends Fragment {
 
 
 }
+
+
+
+
+
 

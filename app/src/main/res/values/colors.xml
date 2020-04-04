@@ -21,4 +21,10 @@
     <color name="whiteTransparentHalf">#80ffffff</color>
 
 
+
+    <color name="lightGray">#F2F2F2</color>
+
+    <color name="disabledBtnBg">#999999</color>
+
+
 </resources>
