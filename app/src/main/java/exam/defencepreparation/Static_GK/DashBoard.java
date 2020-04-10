@@ -32,7 +32,7 @@ public class DashBoard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dash_board);
+        setContentView(R.layout.trydashboard);
         FirebaseMessaging.getInstance().subscribeToTopic("NEWS");
 
         myDialog = new Dialog(this);
@@ -40,6 +40,7 @@ public class DashBoard extends AppCompatActivity {
       //  ll = (LinearLayout) findViewById(R.id.ll);
         mycard1 = (CardView) findViewById(R.id.bankcardId);
         mycard2 = (CardView) findViewById(R.id.defenceinside);
+        mycard3 = (CardView) findViewById(R.id.ssb);
         mycard3 = (CardView) findViewById(R.id.ssb);
         mycard4 = (CardView) findViewById(R.id.video);
         mycard5 = (CardView) findViewById(R.id.shares);

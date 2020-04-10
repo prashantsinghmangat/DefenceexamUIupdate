@@ -140,6 +140,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+
         <androidx.cardview.widget.CardView
             app:cardElevation="12dp"
             app:cardCornerRadius="12dp"
